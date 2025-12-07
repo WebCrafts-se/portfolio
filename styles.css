@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #00ffffe6;
+    --black: #2e2e2e;
+    --white: #dddddd; 
+}
+
+
+/* Typo START */
+
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-wrap: balance;
+    }
+
+
+/* Typo END */
