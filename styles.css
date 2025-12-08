@@ -10,7 +10,6 @@
     --white: #dddddd; 
 }
 
-
 /* Typo START */
 
     p, h1, h2, h3, h4, h5, h6 {
@@ -25,4 +24,179 @@
         text-wrap: balance;
     }
 
-    
+    h1 {
+        font-family: orbitron;
+        font-size: 3.5em;
+        color: white;
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+        animation: fadeIn 2s ease forwards;
+        opacity: 0;
+
+        -webkit-text-stroke: 1px black;
+        color: white;
+        text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+
+    h2 {
+        font-family: orbitron;
+        font-size: 1.5em;
+        color: var(--white);
+        -webkit-text-stroke: 0.3px black;
+        text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
+
+/* Typo END */
+
+    body {
+        background: #0d0d0d;
+        font-family: "Inter", sans-serif;
+    }
+
+/* Header START */
+
+    header {
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 50px #00ffffe6;
+        border-radius: 0 0 30px 30px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .floating-code {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+    }
+
+    .code-line {
+        position: absolute;
+        color: #00ffffe6; /* neon cyan */
+        font-size: 1rem;
+        font-family: "Fira Code", monospace;
+        animation: floatFade 10s linear forwards;
+        white-space: nowrap;
+    }
+
+    @keyframes floatFade {
+        0% { opacity: 0;
+            transform: translateY(20px) translateX(0); }
+            
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+
+        100% { opacity: 0;
+            transform: translateY(-200px) translateX(0); }
+    }
+
+    /* Nav START */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            background-color: var(--black);
+            width: 100%;
+            height: 7em;
+            z-index: 2;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            margin: 2%;
+            width: 12%;
+        }
+
+            /* Desktop NAV START */
+
+            .nav {
+                width: 70%;  
+            }
+
+            .nav ul {
+                display: flex;
+                gap: 2rem;
+                list-style: none;
+                justify-content: flex-end;
+                margin-right: 1.5em;
+            }
+
+            .nav ul li a {
+                color: var(--white);
+                text-decoration: none;
+            }
+        
+        /* Desktop NAV END */
+
+        /* Mobile NAV START */
+
+            .hamburger {
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                /* align-items: center; */
+                width: 30px;
+                height: 20px;
+                cursor: pointer;
+                margin: 1.5em;
+
+            }
+
+            .hamburger span {
+                display: block;
+                height: 3px;
+                background-color: var(--white);
+                border-radius: 2px;
+                transition: transform 0.35s ease, opacity 0.25s ease;
+                transform-origin: center;
+                position: relative;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 8px;
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg);
+                top: -8px;
+            }
+
+        /* Mobile NAV END */
+
+    /* Nav END */
+
+/* Header END */
