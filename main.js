@@ -1,6 +1,7 @@
 import { floatingLines } from "./js/hero.js";
+import { hamburgerToogle } from "./js/hamburgerToogle.js";
 
-
+hamburgerToogle('.hamburger', '.nav');
 
 // Hero section START //
 

@@ -14,17 +14,11 @@ export class floatingLines {
 
         line.style.left = Math.random() * 90 + "%";
         line.style.top = Math.random() * 90 + "%";
-        line.style.animationDuration = 6 + Math.random() * 5 + "s";
+        line.style.animationDuration = this.lifetime / 1000 + "s";
 
         this.heroContainer.appendChild(line);
 
-        setTimeout(() => {
-            line.style.animation ="none";
-            line.style.transition = "opacity 2s";
-            line.style.opacity = 0;
-
-             setTimeout(() => line.remove(), 2000); // ta bort efter fade-out
-            }, this.lifetime);
+        setTimeout(() => line.remove(), this.lifetime);
     }
 
     start() {
