@@ -38,9 +38,9 @@ export class TeamMember {
 export const teamMembers = [
     new TeamMember("Dennis Cederqvist", "img/Dennis.jpg", ["Projectleader", "Developer"]),
 
-    new TeamMember("Sarvin Riazi", "img/Sarvin.jpg", ["Copywriter", "Developer"]),
+    new TeamMember("Sarvin Riazi", "img/sarvin.png", ["Copywriter", "Developer"]),
 
-    new TeamMember("Axel Lindgren", "img/Axel.jpg", ["Communicator", "Developer"]),
+    new TeamMember("Axel Lindgren", "img/axel.png", ["Communicator", "Developer"]),
 
-    new TeamMember("Olivia Mach", "img/Olivia.jpg", ["Designer", "Developer"]),
+    new TeamMember("Olivia Mach", "img/olivia.png", ["Designer", "Developer"]),
 ];
