@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebCrafts</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="contact-card">
+      <form id="contactForm">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name" required />
+
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="name@email.com"
+          required
+        />
+
+        <label>Message</label>
+        <textarea
+          name="message"
+          placeholder="Write your message"
+          required
+        ></textarea>
+
+        <button type="submit">Submit</button>
+
+        <p id="statusMsg" class="hidden"></p>
+      </form>
+    </div>
+  </body>
+  <script type="module" src="form.js"></script>
 </html>
