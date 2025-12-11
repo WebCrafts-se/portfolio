@@ -36,11 +36,11 @@ export class TeamMember {
 }
 
 export const teamMembers = [
-    new TeamMember("Dennis Cederqvist", "img/Dennis.jpg", ["Projectleader", "Developer"]),
+    new TeamMember("Dennis Cederqvist", "Assets/img/Dennis.jpg", ["Projectleader", "Developer"]),
 
-    new TeamMember("Sarvin Riazi", "img/sarvin.png", ["Copywriter", "Developer"]),
+    new TeamMember("Sarvin Riazi", "Assets/img/sarvin.png", ["Copywriter", "Developer"]),
 
-    new TeamMember("Axel Lindgren", "img/axel.png", ["Communicator", "Developer"]),
+    new TeamMember("Axel Lindgren", "Assets/img/axel.png", ["Communicator", "Developer"]),
 
-    new TeamMember("Olivia Mach", "img/olivia.png", ["Designer", "Developer"]),
+    new TeamMember("Olivia Mach", "Assets/img/olivia.png", ["Designer", "Developer"]),
 ];

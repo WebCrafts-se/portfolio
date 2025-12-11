@@ -1,4 +1,4 @@
-import { teamMembers } from "./teamMembers.js";
+import { teamMembers } from "./js-files/teamMembers.js";
 
 function renderTeam(members) {
     const grid = document.getElementById("team-grid");
