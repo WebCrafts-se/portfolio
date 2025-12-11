@@ -1,5 +1,5 @@
-import { floatingLines } from "./js/hero.js";
-import { hamburgerToggle } from "./js/hamburgerToggle.js";
+import { floatingLines } from "./js-files/hero.js";
+import { hamburgerToggle } from "./js-files/hamburgerToggle.js";
 
 hamburgerToggle('.hamburger', '.nav');
 
