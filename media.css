@@ -1,0 +1,21 @@
+ /* ================= OUR PROJECTS ================= */
+/* Tablet */
+@media (min-width: 768px) {
+  .projects__inner { max-width: 900px; }
+
+  .projects__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+
+  .project-card__media { height: 240px; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .projects__inner { max-width: 1100px; }
+  .projects__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}   
