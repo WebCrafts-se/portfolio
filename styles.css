@@ -10,6 +10,15 @@
     --white: #dddddd; 
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 /* Typo START */
 
@@ -25,4 +34,69 @@
         text-wrap: balance;
     }
 
-    
+/* ================= FOOTER ================= */
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin: 0;
+}
+
+/* Footer wrapper */
+.footer {
+  background: #000;
+  color: var(--white);
+  padding: 2.8rem 1rem;
+  margin-top: auto;
+}
+
+/* Centering */
+.footer__inner {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Copyright */
+.footer__copy {
+  font-size: 1rem;
+  margin-bottom: 1.6rem;
+  color: var(--white);
+}
+
+/* Social icons row */
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+/* Icon base */
+.footer__icon img {
+  width: 32px;
+  height: 32px;
+  opacity: 0.9;
+  transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+}
+
+
+/* Neon hover effect */
+.footer__icon:hover img {
+  opacity: 1;
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 6px var(--primary));
+}
+
+/* Footer fade-in animation */
+.footer--hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.footer--visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
