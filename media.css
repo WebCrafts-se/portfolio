@@ -59,3 +59,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }   
+/* ================= FOOTER ================= */
+/* Tablet & up */
+@media (min-width: 768px) {
+  .footer__inner {
+    max-width: 900px;
+  }
+}
