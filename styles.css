@@ -65,14 +65,7 @@ main {
     h2 {
         font-family: orbitron;
         font-size: 1.5em;
-        color: var(--white);
-        -webkit-text-stroke: 0.3px black;
-        text-shadow:
-            3px 3px 0 #000,
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
+        
     }
 
 /* Typo END */
@@ -93,6 +86,17 @@ main {
         overflow: hidden;
         box-shadow: 0px 0px 50px #00ffffe6;
         border-radius: 0 0 30px 30px;
+    }
+
+    .logo-text h2{
+        color: var(--white);
+        -webkit-text-stroke: 0.3px black;
+        text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
     }
 /* Typo END */
 
@@ -225,8 +229,11 @@ main {
 }
 
 #WWD h2 {
-  color: white;
   margin: 30px 0px 10px 0px;
+  color: #ffffff;
+   font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 2.5rem;
 }
 
 .image-container {
@@ -271,10 +278,10 @@ main {
 
 .projects__heading {
   text-align: center;
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  margin-bottom: 1.8rem;
   color: #000;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 2.5rem;
 }
 
 /* Cards layout */
@@ -469,6 +476,14 @@ main {
 #contact-section {
     background: #fff;
     padding: 50px;
+}
+
+#contact-section h2 {
+    color: #2c2c2c;
+    font-size: 1.6rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .contact-card {
