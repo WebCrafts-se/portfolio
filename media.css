@@ -4,15 +4,18 @@
         top: 100%;
         width: 100%;
         background-color: var(--black);
-        max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s ease;
+
     }
 
     .nav.open {
-        max-height: 400px;
+        height: 100dvh;
         background-color: var(--black);
         width: 100%;
+        transform: scaleY(1);
     }
 
     .nav ul {
@@ -21,6 +24,10 @@
         padding: 1rem 2rem;
         background-color: var(--black);
         width: 100%;
+    }
+
+    .nav ul li {
+        font-size: 1.5em;
     }
 
     .hamburger {

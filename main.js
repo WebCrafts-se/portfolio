@@ -1,5 +1,6 @@
 import { floatingLines } from "./js-files/hero.js";
 import { hamburgerToggle } from "./js-files/hamburgerToggle.js";
+import { smoothScroll } from "./js-files/smoothScroll.js";
 
 hamburgerToggle('.hamburger', '.nav');
 
@@ -18,4 +19,6 @@ hamburgerToggle('.hamburger', '.nav');
         floating.start();
 
 // Hero section END //
+
+smoothScroll(menu.closeMenu);
 
