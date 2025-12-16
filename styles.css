@@ -90,6 +90,7 @@ main {
         box-shadow: 0px 0px 50px #00ffffe6;
         border-radius: 0 0 30px 30px;
     }
+/* Typo END */
 
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(20px); }
@@ -458,3 +459,64 @@ main {
 
 }
 /* the team section ENDS */
+
+/* Contact form starts here */
+
+.contact-card {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+}
+
+
+.contact-card label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contact-card textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.contact-card button {
+  width: 100%;
+  padding: 12px;
+  background: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-card button:hover {
+  background: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+#statusMsg {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* contact section ends */

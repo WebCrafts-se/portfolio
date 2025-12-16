@@ -1,8 +1,17 @@
 import { floatingLines } from "./js-files/hero.js";
 import { hamburgerToggle } from "./js-files/hamburgerToggle.js";
 import { smoothScroll } from "./js-files/smoothScroll.js";
+import {renderProjects, setupProjectScrollAnimation} from "./js-files/ourproject.js";
+import { initContactForm } from "./js-files/form.js";
+import { teamMembers } from "./js-files/teamMembers.js";
 
-hamburgerToggle('.hamburger', '.nav');
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjects();
+  setupProjectScrollAnimation();
+  initContactForm();
+  hamburgerToggle('.hamburger', '.nav');
+});
+
 
 // Hero section START //
 
@@ -22,14 +31,6 @@ hamburgerToggle('.hamburger', '.nav');
 
 // smoothScroll(menu.closeMenu);
 
-import {renderProjects, setupProjectScrollAnimation} from "./js-files/ourproject.js";
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderProjects();
-  setupProjectScrollAnimation();
-});
-import { teamMembers } from "./js-files/teamMembers.js";
-
 function renderTeam(members) {
     const grid = document.getElementById("team-grid");
     if (!grid) return;
@@ -42,3 +43,4 @@ function renderTeam(members) {
 }
 
 renderTeam(teamMembers);
+

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="media.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebCrafts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <!-- ============== NAVBAR ================ -->
@@ -70,10 +70,7 @@
     </div>
     </section>
 
-    <script type="module" src="main.js"></script>
-
     <!-- ============= OUR TEAM ============= -->
-
     <main>
         <section class="team-section">
             <h2 class="team-title">Meet the Team</h2>
@@ -82,6 +79,34 @@
         </section>
     </main>
 
-    <script type="module" src="/main.js"></script>
+    
+    <div class="contact-card">
+      <form id="contactForm">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name" required />
+
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="name@email.com"
+          required
+        />
+
+        <label>Message</label>
+        <textarea
+          name="message"
+          placeholder="Write your message"
+          required
+        ></textarea>
+
+        <button type="submit">Submit</button>
+
+        <p id="statusMsg" class="hidden"></p>
+      </form>
+    </div>
+
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>
