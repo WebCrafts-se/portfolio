@@ -20,5 +20,11 @@ hamburgerToggle('.hamburger', '.nav');
 
 // Hero section END //
 
-smoothScroll(menu.closeMenu);
+// smoothScroll(menu.closeMenu);
 
+import {renderProjects, setupProjectScrollAnimation} from "./js-files/ourproject.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjects();
+  setupProjectScrollAnimation();
+});
