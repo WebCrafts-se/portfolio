@@ -199,3 +199,42 @@
     /* Nav END */
 
 /* Header END */
+#WWD {
+  background-color: black;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#WWD h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 0; /* tar bort inline-block whitespace! */
+}
+
+
+
+#WWD img {
+  width: 100%;
+  display: block;
+}
+
+
+.text-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 94.5%;
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  font-size: 0.75rem;
+  color: black;
+  border-radius: 10px;
+}
+
