@@ -32,17 +32,41 @@ document.addEventListener("DOMContentLoaded", () => {
 // smoothScroll(menu.closeMenu);
 
 function renderTeam(members) {
-    const grid = document.getElementById("team-grid");
-    if (!grid) return;
+  const grid = document.getElementById("team-grid");
+  if (!grid) return;
 
-    grid.innerHTML = "";
+  grid.innerHTML = "";
 
-    members.forEach((member) => {
-        grid.appendChild(member.createCardElement());
-    });
+  members.forEach((member) => {
+    grid.appendChild(member.createCardElement());
+  });
+}
+
+function setupRevealAnimation() {
+  const cards = document.querySelectorAll(".team-card");
+  if (!cards.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target); // animeras bara en gång
+      });
+    },
+    {
+      threshold: 0.5, // ~50% synlig
+      root: null,
+      rootMargin: "0px 0px -10% 0px",
+    }
+  );
+
+  cards.forEach((card) => observer.observe(card));
 }
 
 renderTeam(teamMembers);
+setupRevealAnimation();
 
 // ================= FOOTER FADE-IN =================
 const footer = document.querySelector("[data-footer]");
