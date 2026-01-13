@@ -1,7 +1,7 @@
 import { floatingLines } from "./js-files/hero.js";
 import { hamburgerToggle } from "./js-files/hamburgerToggle.js";
 import { smoothScroll } from "./js-files/smoothScroll.js";
-import {renderProjects, setupProjectScrollAnimation} from "./js-files/ourproject.js";
+import { renderProjects, setupProjectScrollAnimation } from "./js-files/ourproject.js";
 import { initContactForm } from "./js-files/form.js";
 import { teamMembers } from "./js-files/teamMembers.js";
 
@@ -9,23 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   setupProjectScrollAnimation();
   initContactForm();
-  hamburgerToggle('.hamburger', '.nav');
+  hamburgerToggle(".hamburger", ".nav");
 });
-
 
 // Hero section START //
 
-    const sampleLines = [
-        "const team = ['Dennis', 'Sarvin', 'Olivia', 'Axel'];",
-        "function build() { return 'WebCraftStudio Magic'; }",
-        "let studio = 'WebCraftStudio';",
-        "// keep creating, keep coding",
-        "if (code === 'life') keepCoding();",
-        "// innovation starts here",
-        ];
+const sampleLines = [
+  "const team = ['Dennis', 'Sarvin', 'Olivia', 'Axel'];",
+  "function build() { return 'WebCraftStudio Magic'; }",
+  "let studio = 'WebCraftStudio';",
+  "// keep creating, keep coding",
+  "if (code === 'life') keepCoding();",
+  "// innovation starts here",
+];
 
-    const floating = new floatingLines("floating", sampleLines,);
-        floating.start();
+const floating = new floatingLines("floating", sampleLines);
+floating.start();
 
 // Hero section END //
 
@@ -75,8 +74,8 @@ if (footer && "IntersectionObserver" in window) {
   footer.classList.add("footer--hidden");
 
   const footerObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           footer.classList.add("footer--visible");
           footerObserver.unobserve(entry.target);

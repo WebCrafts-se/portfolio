@@ -15,7 +15,6 @@
   }
 }
 
-
 /* =========================
    MOBILE / TABLET NAV
    (<= 768px)
@@ -63,7 +62,6 @@
   }
 }
 
-
 /* =========================
    REDUCED MOTION
    ========================= */
@@ -76,7 +74,6 @@
   }
 }
 
-
 /* =========================
    TABLET & UP (>= 768px)
    - Projects
@@ -84,7 +81,6 @@
    - Main padding
    ========================= */
 @media (min-width: 768px) {
-
   /* Projects */
   .projects__inner {
     max-width: 900px;
@@ -110,7 +106,6 @@
     padding: 4rem 2rem 4rem;
   }
 }
-
 
 /* =========================
    DESKTOP (>= 1024px)

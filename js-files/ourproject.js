@@ -4,20 +4,20 @@ export const projectsData = [
     title: "Landingpage",
     meta: "UX / UI • Frontend Development",
     image: "https://picsum.photos/800/600?random=11",
-    link: ""
+    link: "",
   },
   {
     title: "Weather App",
     meta: "Design System • Web Development",
     image: "https://picsum.photos/800/600?random=12",
-    link: ""
+    link: "",
   },
   {
     title: "Snake Game",
     meta: "Gaming • JavaScript",
     image: "https://picsum.photos/800/600?random=13",
-    link: ""
-  }
+    link: "",
+  },
 ];
 
 // ================= RENDER PROJECTS =================
@@ -27,12 +27,14 @@ export function renderProjects() {
 
   list.innerHTML = "";
 
-  projectsData.forEach(project => {
+  projectsData.forEach((project) => {
     const card = document.createElement("article");
     card.className = "project-card project-card--hidden";
 
     card.innerHTML = `
-      <a href="${project.link || "#"}" class="project-card__link" target="_blank">
+      <a href="${
+        project.link || "#"
+      }" class="project-card__link" target="_blank">
         <figure class="project-card__media">
           <img 
             src="${project.image}" 
@@ -57,8 +59,8 @@ export function setupProjectScrollAnimation() {
   if (!("IntersectionObserver" in window)) return;
 
   const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("project-card--visible");
           observer.unobserve(entry.target);
@@ -68,5 +70,5 @@ export function setupProjectScrollAnimation() {
     { threshold: 0.2 }
   );
 
-  cards.forEach(card => observer.observe(card));
+  cards.forEach((card) => observer.observe(card));
 }
