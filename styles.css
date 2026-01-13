@@ -432,6 +432,41 @@ header {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
+.team-card__link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  outline: none;
+}
+
+.team-card__link::after {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.team-card__link:hover .team-card__image,
+.team-card__link:focus-visible .team-card__image {
+  transform: scale(1.2);
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.team-card__link:hover::after,
+.team-card__link:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Valfritt: visa att det är klickbart */
+.team-card__link { cursor: pointer; }
+
 .team-card__image-wrapper {
   width: 80px;
   height: 80px;
@@ -441,9 +476,11 @@ header {
 }
 
 .team-card__image {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  /* object-fit: cover; */
+  transition: transform 200ms ease, filter 200ms ease;
 }
 
 .team-card__name {
