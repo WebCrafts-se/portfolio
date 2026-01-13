@@ -14,6 +14,9 @@ html, body {
   height: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 /* Typo START */
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -149,9 +152,21 @@ main {
         }
 
         .logo {
-            display: flex;
-            align-items: center;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          text-decoration: none;
         }
+
+        .logo,
+        .logo:visited,
+        .logo:hover,
+        .logo:active {
+          color: white;
+          text-decoration: none;
+        }
+
+
 
         .logo img {
             margin: 2%;
@@ -267,7 +282,7 @@ main {
 
  /* ================= OUR PROJECTS ================= */
 
-.projects {
+#projects {
   padding: 3rem 1.25rem;
   background: #f7f7f7;
 }
@@ -392,7 +407,7 @@ main {
 
 /* The team section STARTS */
 
-.team-section {
+#team-section {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
