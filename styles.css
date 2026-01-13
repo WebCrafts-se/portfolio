@@ -83,7 +83,8 @@ main {
 /* Header START */
 
     header {
-        height: 60vh;
+        height: auto;
+        min-height: 100svh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -385,26 +386,6 @@ main {
   transition: opacity .35s ease, transform .35s ease;
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-  .projects__inner { max-width: 900px; }
-
-  .projects__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.8rem;
-  }
-
-  .project-card__media { height: 240px; }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .projects__inner { max-width: 1100px; }
-  .projects__list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}   
 
 
 /* The team section STARTS */
@@ -508,28 +489,6 @@ main {
   }
 }
 
-/* super tiny screens */
-@media (max-width: 360px) {
-    main {
-        padding-inline: 1rem;
-    }
-
-    .team-grid {
-        gap: 1.2rem;
-    }
-
-    .team-card {
-        padding: 1.2rem 0.8rem;
-    }
-}
-
-/* bigger screens */
-@media (min-width: 768px) {
-    main {
-        padding: 4rem 2rem 4rem;
-    }
-
-}
 /* the team section ENDS */
 
 /* Contact form starts here */
