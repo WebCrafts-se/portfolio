@@ -1,7 +1,7 @@
 // ================= OUR PROJECTS DATA =================
 export const projectsData = [
   {
-    title: "To-Do Lits",
+    title: "To-Do List",
     meta: "UX / UI • Frontend Development",
     image: "assets/img/To-Do-List.png",
     link: "https://oliviaamach.github.io/todolist/",

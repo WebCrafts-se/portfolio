@@ -1,0 +1,58 @@
+/* WHAT WE DO */
+
+#WWD {
+  background-color: var(--black);
+  text-align: center;
+  padding: 20px 0;
+}
+
+#WWD h2 {
+  margin: 30px 0px 10px 0px;
+  color: #ffffff;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 2.5rem;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#WWD img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-box {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 2rem);
+  max-width: 860px;
+
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  font-size: 0.75rem;
+  font-size: 1em;
+  color: black;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.text-box a {
+  color: var(--link);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.text-box a:hover {
+  color: var(--primary);
+}

@@ -86,18 +86,6 @@
 }
 
 /* =========================
-   REDUCED MOTION
-   ========================= */
-@media (prefers-reduced-motion: reduce) {
-  .team-card {
-    transition: none;
-    opacity: 1;
-    transform: none;
-    filter: none;
-  }
-}
-
-/* =========================
    TABLET & UP (>= 768px)
    - Projects
    - Footer
@@ -140,5 +128,26 @@
 
   .projects__list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* =========================
+   REDUCED MOTION
+   ========================= */
+@media (prefers-reduced-motion: reduce) {
+  .team-card {
+    transition: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top,
+  .theme-toggle {
+    transition: none;
   }
 }
