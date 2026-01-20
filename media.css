@@ -15,6 +15,15 @@
   }
 }
 
+/* Fix tiny devices where header ends up narrower than viewport */
+@media (max-width: 420px) {
+  header {
+    width: 100vw;                 
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
+
 /* =========================
    MOBILE / TABLET NAV
    (<= 768px)
@@ -58,8 +67,22 @@
     z-index: 2;
   }
   header {
-    height: 60vh;
+    min-height: 100svh;
   }
+
+  h1 {
+    font-size: 2.4rem;
+    line-height: 1.05;
+  }
+
+  .code-line {
+    font-size: 0.9rem;
+    max-width: 90vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  
 }
 
 /* =========================

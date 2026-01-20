@@ -7,19 +7,33 @@ export class floatingLines {
     this.timer = null;
   }
 
-  createLine() {
-    const line = document.createElement("div");
-    line.className = "code-line";
-    line.innerText = this.lines[Math.floor(Math.random() * this.lines.length)];
+ createLine() {
+  if (!this.heroContainer) return;
 
-    line.style.left = Math.random() * 90 + "%";
-    line.style.top = Math.random() * 90 + "%";
-    line.style.animationDuration = this.lifetime / 1000 + "s";
+  const rect = this.heroContainer.getBoundingClientRect();
 
-    this.heroContainer.appendChild(line);
+  const line = document.createElement("div");
+  line.className = "code-line";
+  line.innerText = this.lines[Math.floor(Math.random() * this.lines.length)];
 
-    setTimeout(() => line.remove(), this.lifetime);
-  }
+  line.style.animationDuration = this.lifetime / 600 + "s";
+
+  this.heroContainer.appendChild(line);
+
+  // measure AFTER append so we know the element size
+  const lineRect = line.getBoundingClientRect();
+
+  const maxX = Math.max(0, rect.width - lineRect.width);
+  const maxY = Math.max(0, rect.height - lineRect.height);
+
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  line.style.left = `${x}px`;
+  line.style.top = `${y}px`;
+
+  setTimeout(() => line.remove(), this.lifetime);
+}
 
   start() {
     if (!this.timer) {
