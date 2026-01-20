@@ -1,22 +1,22 @@
 // ================= OUR PROJECTS DATA =================
 export const projectsData = [
   {
-    title: "Landingpage",
+    title: "To-Do Lits",
     meta: "UX / UI • Frontend Development",
-    image: "https://picsum.photos/800/600?random=11",
-    link: "",
+    image: "assets/img/To-Do-List.png",
+    link: "https://oliviaamach.github.io/todolist/",
   },
   {
     title: "Weather App",
     meta: "Design System • Web Development",
-    image: "https://picsum.photos/800/600?random=12",
-    link: "",
+    image: "assets/img/weather-app.png",
+    link: "https://sarvinincode.github.io/WeatherApp-Team-/",
   },
   {
     title: "Snake Game",
     meta: "Gaming • JavaScript",
-    image: "https://picsum.photos/800/600?random=13",
-    link: "",
+    image: "assets/img/snake.png",
+    link: "https://denniscederqvist.github.io/Trake/",
   },
 ];
 

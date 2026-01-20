@@ -1,3 +1,5 @@
+/* RESET + VARIABLES */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +10,10 @@
   --primary: #00ffffe6;
   --black: #0e0e0e;
   --white: #dddddd;
+
 }
+
+/* BASE */
 
 html,
 body {
@@ -18,6 +23,20 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 7em;
+  color-scheme: dark; /* Keep overall UI dark */
+
+}
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #000;
+  color: var(--white);
+}
+
+main {
+  padding: 2.5rem 1.5rem 3rem;
 }
 
 /* Typo START */
@@ -45,24 +64,9 @@ h6 {
   text-wrap: balance;
 }
 
-body {
-  min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  background-color: #000; /* matches the black background in your mockup */
-  color: var(--white);
-}
-
-main {
-  padding: 2.5rem 1.5rem 3rem;
-}
-
-/* Typo END */
-
 h1 {
   font-family: orbitron;
   font-size: 3.5rem;
-  color: white;
   font-weight: 700;
   position: relative;
   z-index: 2;
@@ -80,14 +84,20 @@ h2 {
   font-size: 1.5em;
 }
 
-/* Typo END */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-body {
-  background: #0d0d0d;
-  font-family: "Inter", sans-serif;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Header START */
+
+/* Header HERO */
 
 header {
   height: auto;
@@ -106,18 +116,6 @@ header {
   -webkit-text-stroke: 0.3px black;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
-}
-/* Typo END */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .floating-code {
@@ -158,7 +156,7 @@ header {
   }
 }
 
-/* Nav START */
+/* NAVBAR */
 .navbar {
   display: flex;
   align-items: center;
@@ -193,7 +191,7 @@ header {
   margin: 0;
 }
 
-/* Desktop NAV START */
+/* DESKTOP NAV */
 
 .nav {
   width: 70%;
@@ -212,15 +210,12 @@ header {
   text-decoration: none;
 }
 
-/* Desktop NAV END */
-
 /* Mobile NAV START */
 
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: center; */
   width: 30px;
   height: 20px;
   cursor: pointer;
@@ -252,11 +247,8 @@ header {
   top: -8px;
 }
 
-/* Mobile NAV END */
+/* WHAT WE DO */
 
-/* Nav END */
-
-/* Header END */
 #WWD {
   background-color: var(--black);
   text-align: center;
@@ -297,7 +289,7 @@ header {
   border-radius: 10px;
 }
 
-/* ================= OUR PROJECTS ================= */
+/* OUR PROJECTS  */
 
 #projects {
   padding: 3rem 1.25rem;
@@ -317,7 +309,6 @@ header {
   margin-bottom: 2.5rem;
 }
 
-/* Cards layout */
 .projects__list {
   display: flex;
   flex-direction: column;
@@ -351,7 +342,6 @@ header {
   display: block;
 }
 
-/* Overlay */
 .project-card__overlay {
   position: absolute;
   inset: 0;
@@ -380,7 +370,6 @@ header {
   opacity: 0.85;
 }
 
-/* Hover (desktop only) */
 @media (hover: hover) {
   .project-card:hover {
     transform: translateY(-4px);
@@ -388,7 +377,6 @@ header {
   }
 }
 
-/* Fade-up animation */
 .project-card--hidden {
   opacity: 0;
   transform: translateY(16px);
@@ -409,7 +397,7 @@ header {
 }
 
 .team-title {
-  color: #ffffff;
+  color: #fff;
   font-size: 1.6rem;
   letter-spacing: 0.15em;
   margin-bottom: 2.5rem;
@@ -437,35 +425,8 @@ header {
   overflow: hidden;
   position: relative;
   outline: none;
+  cursor: pointer;
 }
-
-.team-card__link::after {
-  position: absolute;
-  left: 12px;
-  bottom: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 200ms ease, transform 200ms ease;
-}
-
-.team-card__link:hover .team-card__image,
-.team-card__link:focus-visible .team-card__image {
-  transform: scale(1.2);
-  filter: saturate(1.1) contrast(1.05);
-}
-
-.team-card__link:hover::after,
-.team-card__link:focus-visible::after {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Valfritt: visa att det är klickbart */
-.team-card__link { cursor: pointer; }
 
 .team-card__image-wrapper {
   width: 80px;
@@ -482,6 +443,12 @@ header {
   transition: transform 1000ms ease, filter 200ms ease;
 }
 
+.team-card__link:hover .team-card__image,
+.team-card__link:focus-visible .team-card__image {
+  transform: scale(1.2);
+  filter: saturate(1.1) contrast(1.05);
+}
+
 .team-card__name {
   font-size: 1rem;
   font-weight: 500;
@@ -494,7 +461,6 @@ header {
   color: #f5f5f5;
 }
 
-/* --- Reveal animation (start hidden) --- */
 .team-card {
   opacity: 0;
   transform: translateX(0) translateY(16px) scale(0.98);
@@ -505,51 +471,42 @@ header {
   will-change: transform, opacity, filter;
 }
 
-/* Varannan från vänster/höger */
 .team-card:nth-child(odd) {
   transform: translateX(-40px) translateY(16px) scale(0.98);
 }
+
 .team-card:nth-child(even) {
   transform: translateX(40px) translateY(16px) scale(0.98);
 }
 
-/* När kortet är i bild */
 .team-card.is-visible {
   opacity: 1;
   transform: translateX(0) translateY(0) scale(1);
   filter: blur(0);
 }
 
-/* Lite stagger */
 .team-card:nth-child(1) {
   transition-delay: 0ms;
 }
+
 .team-card:nth-child(2) {
   transition-delay: 80ms;
 }
+
 .team-card:nth-child(3) {
   transition-delay: 160ms;
 }
+
 .team-card:nth-child(4) {
   transition-delay: 240ms;
 }
 
-/* Respektera reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .team-card {
-    transition: none;
-    opacity: 1;
-    transform: none;
-    filter: none;
-  }
-}
-
-/* the team section ENDS */
-
 /* Contact form starts here */
 
 #contact-section {
+  color-scheme: light;
   background: #fff;
+  color: #2c2c2c;
   padding: 50px;
 }
 
@@ -579,12 +536,19 @@ header {
 
 .contact-card input,
 .contact-card textarea {
-  width: 90%;
+  width: 100%;
   padding: 12px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 14px;
+  background: #f2f2f2;
+  color: #111;
+}
+
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  color: #666;
 }
 
 .contact-card textarea {
@@ -596,7 +560,7 @@ header {
   width: 100%;
   padding: 12px;
   background: #2c2c2c;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -617,7 +581,6 @@ header {
   text-align: center;
 }
 
-/* contact section ends */
 /* ================= FOOTER ================= */
 
 .footer-divider {
@@ -627,29 +590,25 @@ header {
   margin: 0;
 }
 
-/* Footer wrapper */
 .footer {
   background: #000;
-  color: var(--white);
+  color: #dddddd;
   padding: 2.8rem 1rem;
   margin-top: auto;
 }
 
-/* Centering */
 .footer__inner {
   max-width: 420px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* Copyright */
 .footer__copy {
   font-size: 1rem;
   margin-bottom: 1.6rem;
-  color: var(--white);
+  color: #dddddd;
 }
 
-/* Social icons row */
 .footer__socials {
   display: flex;
   justify-content: center;
@@ -657,7 +616,6 @@ header {
   gap: 1.3rem;
 }
 
-/* Icon base */
 .footer__icon img {
   width: 32px;
   height: 32px;
@@ -665,14 +623,12 @@ header {
   transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
 }
 
-/* Neon hover effect */
 .footer__icon:hover img {
   opacity: 1;
   transform: translateY(-2px);
   filter: drop-shadow(0 0 6px var(--primary));
 }
 
-/* Footer fade-in animation */
 .footer--hidden {
   opacity: 0;
   transform: translateY(24px);
@@ -682,4 +638,43 @@ header {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* SCROLL TO TOP BUTTON */
+.scroll-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.65);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity .2s ease, transform .2s ease, box-shadow .2s ease;
+  z-index: 50;
+}
+
+.scroll-top:hover {
+  box-shadow: 0 0 10px rgba(0,255,255,0.22);
+}
+
+.scroll-top--visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top,
+  .theme-toggle {
+    transition: none;
+  }
 }
