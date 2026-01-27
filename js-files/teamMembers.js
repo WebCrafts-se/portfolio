@@ -47,15 +47,15 @@ export const teamMembers = [
     "Projectleader",
     "Developer",], "https://www.linkedin.com/in/dennis-cederqvist/"),
 
-  new TeamMember("Sarvin Riazi", "Assets/img/sarvin.png", [
+  new TeamMember("Sarvin Riazi", "./assets/img/sarvin.png", [
     "Copywriter",
     "Developer",], "https://www.linkedin.com/in/sarvinriazi/"),
 
-  new TeamMember("Axel Lindgren", "Assets/img/axel.png", [
+  new TeamMember("Axel Lindgren", "./ssets/img/axel.png", [
     "Communicator",
     "Developer",], "https://www.linkedin.com/in/axel-lindgren-a26264244/"),
 
-  new TeamMember("Olivia Mach", "Assets/img/olivia.png", [
+  new TeamMember("Olivia Mach", "./assets/img/olivia.png", [
     "Designer",
     "Developer",], "https://www.linkedin.com/in/olivia-mach-0b433811a/" ),
 ];
