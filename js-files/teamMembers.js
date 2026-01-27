@@ -47,7 +47,7 @@ export const teamMembers = [
     "Projectleader",
     "Developer",], "https://www.linkedin.com/in/dennis-cederqvist/"),
 
-  new TeamMember("Sarvin Riazi", "Assets/img/sarvin.png", [
+  new TeamMember("Sarvin Riazi", "Assets/img/Sarvin.png", [
     "Copywriter",
     "Developer",], "https://www.linkedin.com/in/sarvinriazi/"),
 
