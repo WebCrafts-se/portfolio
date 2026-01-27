@@ -2,9 +2,6 @@
    SUPER TINY SCREENS
    ========================= */
 @media (max-width: 360px) {
-  main {
-    padding-inline: 1rem;
-  }
 
   .team-grid {
     gap: 1.2rem;
@@ -110,11 +107,6 @@
   /* Footer */
   .footer__inner {
     max-width: 900px;
-  }
-
-  /* Main layout */
-  main {
-    padding: 4rem 2rem 4rem;
   }
 }
 

@@ -3,7 +3,7 @@
 #team-section {
   text-align: center;
   background-color: var(--black);
-  margin-bottom: 2.5rem
+  /* margin-bottom: 2.5rem */
 }
 
 .team-title {
@@ -19,6 +19,7 @@
   gap: 1.6rem;
   margin: 0 auto;
   max-width: 1000px;
+  padding: 0 2.5rem 2.5rem 2.5rem;
 }
 
 
