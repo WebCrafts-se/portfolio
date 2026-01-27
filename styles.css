@@ -17,13 +17,9 @@
 
 /* BASE */
 
-html,
-body {
+html, body {  
   height: 100%;
   overflow-x: hidden;
-}
-
-html {
   scroll-behavior: smooth;
   scroll-padding-top: 7em;
   color-scheme: dark; /* Keep overall UI dark */
