@@ -7,26 +7,25 @@ export class TeamMember {
   }
 
   createCardElement() {
-    const card = document.createElement("article");
+    const card = document.createElement("a");
     card.classList.add("team-card");
+    card.href = this.linkedInUrl;
+    card.target = "_blank";
+    card.rel = "noopener noreferrer";
+    card.setAttribute("aria-label", `Open ${this.name} on LinkedIn`);
+
 
     const imgWrapper = document.createElement("div");
     imgWrapper.classList.add("team-card__image-wrapper");
-
-    const link = document.createElement("a");
-    link.classList.add("team-card__link");
-    link.href = this.linkedInUrl;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.setAttribute("aria-label", `Open ${this.name} on LinkedIn`);
 
     const img = document.createElement("img");
     img.classList.add("team-card__image");
     img.src = this.imageSrc;
     img.alt = `${this.name} portraits`;
 
-    link.appendChild(img);
-    imgWrapper.appendChild(link);
+    imgWrapper.appendChild(img);
+
+
     card.appendChild(imgWrapper);
 
     const nameEl = document.createElement("h3");
