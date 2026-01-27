@@ -3,19 +3,19 @@ export const projectsData = [
   {
     title: "To-Do List",
     meta: "UX / UI • Frontend Development",
-    image: "./assets/img/To-Do-List.png",
+    image: "Assets/img/To-Do-List.png",
     link: "https://oliviaamach.github.io/todolist/",
   },
   {
     title: "Weather App",
     meta: "Design System • Web Development",
-    image: "./assets/img/weather-app.png",
+    image: "Assets/img/weather-app.png",
     link: "https://sarvinincode.github.io/WeatherApp-Team-/",
   },
   {
     title: "Snake Game",
     meta: "Gaming • JavaScript",
-    image: "./assets/img/snake.png",
+    image: "Assets/img/snake.png",
     link: "https://denniscederqvist.github.io/Trake/",
   },
 ];
